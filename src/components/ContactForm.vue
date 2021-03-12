@@ -74,7 +74,7 @@ export default {
             }
         };
     },
-    method: {
+    methods: {
         handleSubmit() {
             const isValid = this.$refs.contactForm.validate();
             if (!isValid) {
