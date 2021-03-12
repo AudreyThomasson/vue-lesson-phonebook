@@ -1,6 +1,6 @@
 <template>
   <div class="mb-5">
-      <h3>Contacts</h3>
+      <h3 class="deep-purple--text">Contacts</h3>
       <v-simple-table>
           <template v-slot:default>
               <thead>
@@ -12,7 +12,7 @@
                   </tr>
               </thead>
               <tbody>
-                  <tr v-for="contact in contacts" :key="contact.pnone">
+                  <tr v-for="contact in contacts" :key="contact.phone">
                       <td>{{ contact.firstName }} {{ contact.lastName }}</td>
                       <td>{{ contact.phone }}</td>
                       <td>{{ contact.type }}</td>
@@ -21,11 +21,12 @@
               </tbody>
             </template>
       </v-simple-table>
+    </div>  
 </template>
 
 <script>
 export default {
-
+    props: ["contacts"]
 }
 </script>
 
